@@ -196,7 +196,7 @@ while running:
                 pygame.draw.rect(screen, color, (screen_x, screen_y, tile_size, tile_size))
 
     # Draw player as '@'
-    player_text = font.render("@", True, (0, 200, 255))
+    player_text = font.render("[]", True, (0, 200, 255))
     screen.blit(player_text, (player.rect.x - camera_offset_x, player.rect.y - camera_offset_y))
 
     # Draw boss room marker if visible
