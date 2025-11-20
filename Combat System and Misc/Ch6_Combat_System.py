@@ -44,6 +44,8 @@ class CombatSystem:
             base_damage += 3
         elif weapon_name == "Shield":
             base_damage = 1
+        elif weapon_name == "Magic Staff":
+            base_damage += 4 + (0.5 * player.skills["Intelligence"])
 
         crit_chance = min(0.03 * luck, 1.0)
         if random.random() < crit_chance:
