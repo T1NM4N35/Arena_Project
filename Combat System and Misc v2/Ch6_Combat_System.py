@@ -121,6 +121,11 @@ class CombatSystem:
                 return False
             # Use grid.line_of_sight to check blocking; grid expects coords as (x,y)
             return grid.line_of_sight(attacker_pos, target_pos)
+        # Magic Staff: range 4 in any direction with LoS
+        if weapon_name == "Magic Staff":
+            if manhattan(attacker_pos, target_pos) > 4:
+                return False
+            return grid.line_of_sight(attacker_pos, target_pos)
 
         return False
 
